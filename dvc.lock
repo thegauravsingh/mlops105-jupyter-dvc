@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  stage_feature_extraction:
+    cmd: python src/featurization.py
+    deps:
+    - path: data/iris.csv
+      md5: 57fce90c81521889c736445f058c4838
+      size: 3716
+    - path: src/featurization.py
+      md5: ab56a80d6d099f393c29577d0287be0b
+      size: 515
+    outs:
+    - path: data/iris_featurized.csv
+      md5: 04ed69383af337e9dabf934cbc8abc11
+      size: 3858
